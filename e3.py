@@ -62,14 +62,10 @@ while True:
                 biggest_percentage = [dataset["Nombre"], dataset["Tokens para set de entrenamiento (%)"]]
             if smallest_percentage[1] > dataset["Tokens para set de entrenamiento (%)"]:
                 smallest_percentage = [dataset["Nombre"], dataset["Tokens para set de entrenamiento (%)"]]
-
-            # se va acumulando la cantidad de tokens usados para el set de entrenamiento de cada dataset. luego se sacará el promedio dividiendo entre la cantidad de datasets
-            train_set_tokens += dataset["Cantidad de tokens"] * (dataset["Tokens para set de entrenamiento (%)"] / 100)
         
         print("Cantidad total de tokens:", total_tokens)
         print("Dataset con mayor porcentaje de tokens para set de entrenamiento:", biggest_percentage[0])
         print("Dataset con menor porcentaje de tokens para set de entrenamiento:", smallest_percentage[0])
-        print("Promedio de tokens usados para el set de entrenamiento:", train_set_tokens/len(datasets))
 
     elif option == "4":
         print("Hasta pronto!")
